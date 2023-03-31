@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Сетка элементов с фильтром</title>
+    <link
+      rel="preload"
+      href="fonts/gothampro_black.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="preload" href="fonts/gothampro_bold.woff2" as="font" type="font/woff2" crossorigin />
+    <link
+      rel="preload"
+      href="fonts/gothampro_regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body id="body">
+    <div class="page">
+      <h1 class="page__title">Сетка элементов с фильтром</h1>
+      <section class="work">
+        <div class="work__container container">
+          <div class="work__top">
+            <h2 class="work__title">Our <b>Work</b></h2>
+            <ul class="work__tabs">
+              <li class="work__tab">
+                <button class="work__btn work__btn--active" data-filter="all">all images</button>
+              </li>
+              <li class="work__tab">
+                <button class="work__btn" data-filter="nature">nature</button>
+              </li>
+              <li class="work__tab">
+                <button class="work__btn" data-filter="flowers">flowers</button>
+              </li>
+              <li class="work__tab">
+                <button class="work__btn" data-filter="trees">trees</button>
+              </li>
+            </ul>
+          </div>
+          <div class="work__gallery gallery" id="gallery">
+            <div class="gallery__item gallery__item--hidden" data-target="flowers">
+              <img class="gallery__img" src="/images/1.jpg" alt="" />
+            </div>
+            <div class="gallery__item gallery__item--hidden" data-target="nature">
+              <img class="gallery__img" src="/images/2.jpg" alt="" />
+            </div>
+            <div class="gallery__item gallery__item--hidden" data-target="flowers">
+              <img class="gallery__img" src="/images/3.jpg" alt="" />
+            </div>
+            <div class="gallery__item gallery__item--hidden" data-target="nature">
+              <img class="gallery__img" src="/images/4.jpg" alt="" />
+            </div>
+            <div class="gallery__item gallery__item--hidden" data-target="flowers">
+              <img class="gallery__img" src="/images/5.jpg" alt="" />
+            </div>
+            <div class="gallery__item gallery__item--hidden" data-target="flowers">
+              <img class="gallery__img" src="/images/6.jpg" alt="" />
+            </div>
+            <div class="gallery__item gallery__item--hidden" data-target="trees">
+              <img class="gallery__img" src="/images/7.jpg" alt="" />
+            </div>
+            <div class="gallery__item gallery__item--hidden" data-target="nature">
+              <img class="gallery__img" src="/images/8.jpg" alt="" />
+            </div>
+            <div class="gallery__item gallery__item--hidden" data-target="trees">
+              <img class="gallery__img" src="/images/9.jpg" alt="" />
+            </div>
+            <div class="gallery__item gallery__item--hidden" data-target="trees">
+              <img class="gallery__img" src="/images/10.jpg" alt="" />
+            </div>
+            <div class="gallery__item gallery__item--hidden" data-target="flowers">
+              <img class="gallery__img" src="/images/11.jpg" alt="" />
+            </div>
+            <div class="gallery__item gallery__item--hidden" data-target="trees">
+              <img class="gallery__img" src="/images/12.jpg" alt="" />
+            </div>
+            <div class="gallery__item gallery__item--hidden" data-target="flowers">
+              <img class="gallery__img" src="/images/13.jpg" alt="" />
+            </div>
+            <div class="gallery__item gallery__item--hidden" data-target="trees">
+              <img class="gallery__img" src="/images/14.jpg" alt="" />
+            </div>
+            <div class="gallery__item gallery__item--hidden" data-target="nature">
+              <img class="gallery__img" src="/images/15.jpg" alt="" />
+            </div>
+            <div class="gallery__item gallery__item--hidden" data-target="nature">
+              <img class="gallery__img" src="/images/16.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
+<!-- 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Masonry gallery</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="work__top">
+        <h2 class="work__title">Our <b>Work</b></h2>
+        <ul class="work__tabs">
+          <li class="work__tab">
+            <button class="work__btn work__btn--active" data-filter="all">all images</button>
+          </li>
+          <li class="work__tab">
+            <button class="work__btn" data-filter="nature">nature</button>
+          </li>
+          <li class="work__tab">
+            <button class="work__btn" data-filter="flowers">flowers</button>
+          </li>
+          <li class="work__tab">
+            <button class="work__btn" data-filter="trees">trees</button>
+          </li>
+        </ul>
+      </div>
+      <div class="masonry" id="masonry">
+        <div class="masonryItem" data-width="1000" data-height="1333">
+          <div class="masonryCover" style="background-image: url(images/1.jpg)"></div>
+          <img class="masonryImage" src="images/1.jpg" alt="Вид с горы" />
+        </div>
+        <div class="masonryItem" data-width="1000" data-height="750">
+          <div class="masonryCover" style="background-image: url(images/2.jpg)"></div>
+          <img class="masonryImage" src="images/2.jpg" alt="Вода" />
+        </div>
+        <div class="masonryItem" data-width="1000" data-height="1333">
+          <div class="masonryCover" style="background-image: url(images/3.jpg)"></div>
+          <img class="masonryImage" src="images/3.jpg" alt="На вершине гор" />
+        </div>
+        <div class="masonryItem" data-width="1000" data-height="1023">
+          <div class="masonryCover" style="background-image: url(images/4.jpg)"></div>
+          <img class="masonryImage" src="images/4.jpg" alt="Темная гладь" />
+        </div>
+        <div class="masonryItem" data-width="1000" data-height="1333">
+          <div class="masonryCover" style="background-image: url(images/5.jpg)"></div>
+          <img class="masonryImage" src="images/5.jpg" alt="Спокойная стихия" />
+        </div>
+        <div class="masonryItem" data-width="1000" data-height="750">
+          <div class="masonryCover" style="background-image: url(images/6.jpg)"></div>
+          <img class="masonryImage" src="images/6.jpg" alt="Водопад" />
+        </div>
+        <div class="masonryItem" data-width="1000" data-height="1333">
+          <div class="masonryCover" style="background-image: url(images/7.jpg)"></div>
+          <img class="masonryImage" src="images/7.jpg" alt="Зеркало воды" />
+        </div>
+        <div class="masonryItem" data-width="1000" data-height="1000">
+          <div class="masonryCover" style="background-image: url(images/13.jpg)"></div>
+          <img class="masonryImage" src="images/13.jpg" alt="Дикие ягоды" />
+        </div>
+        <div class="masonryItem" data-width="1000" data-height="1333">
+          <div class="masonryCover" style="background-image: url(images/9.jpg)"></div>
+          <img class="masonryImage" src="images/9.jpg" alt="В облаках" />
+        </div>
+        <div class="masonryItem" data-width="1000" data-height="1333">
+          <div class="masonryCover" style="background-image: url(images/10.jpg)"></div>
+          <img class="masonryImage" src="images/10.jpg" alt="Бурление" />
+        </div>
+        <div class="masonryItem" data-width="1000" data-height="1333">
+          <div class="masonryCover" style="background-image: url(images/11.jpg)"></div>
+          <img class="masonryImage" src="images/11.jpg" alt="Под водопадом" />
+        </div>
+        <div class="masonryItem" data-width="1000" data-height="1112">
+          <div class="masonryCover" style="background-image: url(images/12.jpg)"></div>
+          <img class="masonryImage" src="images/12.jpg" alt="Спутники гор" />
+        </div>
+        <div class="masonryItem" data-width="1000" data-height="750">
+          <div class="masonryCover" style="background-image: url(images/8.jpg)"></div>
+          <img class="masonryImage" src="images/8.jpg" alt="Вид" />
+        </div>
+        <div class="masonryItem" data-width="1000" data-height="1333">
+          <div class="masonryCover" style="background-image: url(images/14.jpg)"></div>
+          <img class="masonryImage" src="images/14.jpg" alt="Журчание воды" />
+        </div>
+        <div class="masonryItem" data-width="1000" data-height="1632">
+          <div class="masonryCover" style="background-image: url(images/15.jpg)"></div>
+          <img class="masonryImage" src="images/15.jpg" alt="Пропасть" />
+        </div>
+        <div class="masonryItem" data-width="1000" data-height="750">
+          <div class="masonryCover" style="background-image: url(images/16.jpg)"></div>
+          <img class="masonryImage" src="images/16.jpg" alt="Туманное утро" />
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html> -->
